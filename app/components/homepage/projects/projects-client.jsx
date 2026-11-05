@@ -108,9 +108,9 @@ export default function ProjectsClient({ projects = [] }) {
         );
       })}
 
-      {/* In-flow bottom spacer on desktop so all 4 tabs remain fully stacked and accessible */}
+      {/* In-flow bottom spacer on desktop so all 5 tabs remain fully stacked and accessible */}
       <div
-        className="hidden lg:block w-full h-[75vh] pointer-events-none"
+        className="hidden lg:block w-full h-[95vh] pointer-events-none"
         aria-hidden="true"
       />
     </div>

@@ -7,13 +7,13 @@ import React from 'react';
 function ProjectCard({
   project,
   index = 0,
-  total = 4,
+  total = 5,
   stickyTop = 92,
   isCollapsed = false,
   headerHeight = 56,
 }) {
   const demoUrl = project.demo || project.links?.demo || '';
-  const codeUrl = project.code || project.links?.code || '';
+  const codeUrl = project.code || project.codeRepository || project.links?.code || '';
   const hasValidDemo = Boolean(demoUrl && demoUrl !== 'TODO' && !demoUrl.includes('TODO'));
   const hasValidCode = Boolean(codeUrl && codeUrl !== 'TODO' && !codeUrl.includes('TODO'));
 
@@ -67,10 +67,10 @@ function ProjectCard({
           </p>
         </div>
 
-        {/* Right: Top Project badge (for BookInn) or balanced spacer */}
+        {/* Right: Top Project badge (for SentinelVision) or balanced spacer */}
         <div className="flex items-center justify-end shrink-0 w-28">
           {project.isFeatured ? (
-            <span className="inline-flex items-center px-2.5 py-1 leading-none text-[11px] sm:text-xs font-semibold rounded-full bg-[#16f2b3]/20 text-[#16f2b3] border border-[#16f2b3]/40 uppercase tracking-wider whitespace-nowrap shrink-0">
+            <span className="inline-flex items-center px-2.5 py-1 leading-none text-xs sm:text-[13px] font-semibold rounded-full bg-[#16f2b3]/20 text-[#16f2b3] border border-[#16f2b3]/40 uppercase tracking-wider whitespace-nowrap shrink-0">
               Top Project
             </span>
           ) : (
@@ -80,9 +80,9 @@ function ProjectCard({
       </div>
 
       {/* CARD BODY: Below header, contains Code panel */}
-      <div className="p-4 sm:p-5 lg:p-6">
-        <div className="w-full bg-[#090d1f]/70 rounded-lg border border-indigo-950/60 p-4 sm:p-5 lg:p-6">
-          <code className="font-mono text-xs sm:text-sm lg:text-base whitespace-pre-wrap break-words leading-relaxed block text-gray-300">
+      <div className="p-3.5 sm:p-4 lg:py-3.5 lg:px-5">
+        <div className="w-full bg-[#090d1f]/70 rounded-lg border border-indigo-950/60 p-3.5 sm:p-4 lg:py-3.5 lg:px-5">
+          <code className="font-mono text-sm sm:text-[15px] lg:text-base whitespace-pre-wrap break-words leading-relaxed block text-gray-300">
             <div className="space-y-1.5 sm:space-y-2">
               <div>
                 <span className="mr-2 text-pink-500">const</span>
@@ -97,6 +97,15 @@ function ProjectCard({
                 <span className="text-amber-300">{project.name}</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
+
+              {project.status && (
+                <div className="ml-4 sm:ml-6 lg:ml-8 mr-2">
+                  <span className="text-white">status:</span>
+                  <span className="text-gray-400">{` '`}</span>
+                  <span className="text-amber-300">{project.status}</span>
+                  <span className="text-gray-400">{`',`}</span>
+                </div>
+              )}
 
               <div className="ml-4 sm:ml-6 lg:ml-8 mr-2">
                 <span className="text-white">tools:</span>

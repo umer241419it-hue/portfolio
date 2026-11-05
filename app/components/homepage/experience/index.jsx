@@ -20,10 +20,10 @@ function Experience() {
       />
 
       <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex  items-center">
+        <div className="flex items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
           <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Experiences
+            Community Experience
           </span>
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
         </div>
@@ -40,8 +40,8 @@ function Experience() {
           <div>
             <div className="flex flex-col gap-6">
               {
-                experiences.map(experience => (
-                  <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
+                experiences.map(item => (
+                  <GlowCard key={item.id} identifier={`experience-${item.id}`}>
                     <div className="p-3 relative">
                       <Image
                         src="/blur-23.svg"
@@ -52,20 +52,25 @@ function Experience() {
                       />
                       <div className="flex justify-center">
                         <p className="text-xs sm:text-sm text-[#16f2b3]">
-                          {experience.duration}
+                          {item.duration}
                         </p>
                       </div>
-                      <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-violet-500  transition-all duration-300 hover:scale-125">
+                      <div className="flex items-center gap-x-6 px-3 py-5">
+                        <div className="text-violet-500 transition-all duration-300 hover:scale-125 flex-shrink-0">
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                            {experience.title}
+                          <p className="text-base sm:text-xl mb-1 font-medium uppercase text-white">
+                            {item.title}
                           </p>
-                          <p className="text-sm sm:text-base">
-                            {experience.company}
+                          <p className="text-sm sm:text-base text-[#16f2b3] font-medium">
+                            {item.company}
                           </p>
+                          {item.description && (
+                            <p className="text-xs sm:text-sm text-gray-300 mt-2">
+                              {item.description}
+                            </p>
+                          )}
                         </div>
                       </div>
                     </div>

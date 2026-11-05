@@ -1,52 +1,70 @@
 export const projectsData = [
-    {
-        id: 1,
-        name: 'AI Powered Financial App',
-        description: "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
-        tools: ['Express', 'MongoDB', 'OpenAI API', 'AWS SES', 'AWS S3', 'Node Mailer', 'Joi', 'Puppeteer', 'EC2', 'PM2', 'Nginx'],
-        role: 'Backend Developer',
-        code: '',
-        demo: '',
+  {
+    id: 1,
+    name: 'BookInn',
+    description: "Full-stack MERN hotel booking platform with role-based access control, separate user/admin views, category-based search, live room availability, and user-specific booking management. Integrated Razorpay payments (test mode) with cancellation/refund workflows and transaction tracking.",
+    deployment: "Originally deployed on AWS EC2 with an automated deployment script (documented in the repo README, redeployable anytime). The live demo runs on Vercel (frontend), Render (backend) and MongoDB Atlas (database) to keep hosting costs near zero.",
+    tools: ['React', 'Node.js', 'Express', 'MongoDB', 'MongoDB Atlas', 'Razorpay API', 'AWS EC2', 'Vercel', 'Render'],
+    myRole: 'Full Stack Developer',
+    role: 'Full Stack Developer',
+    code: 'https://github.com/umer241419it-hue/BookInn',
+    demo: 'https://book-inn-sigma.vercel.app/',
+    links: {
+      code: 'https://github.com/umer241419it-hue/BookInn',
+      demo: 'https://book-inn-sigma.vercel.app/'
     },
-    {
-        id: 2,
-        name: 'Travel Agency App',
-        description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
-        tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
-        role: 'Full Stack Developer',
-        code: '',
-        demo: '',
+    liveLinkNote: "First load may take a few seconds while the free-tier backend wakes up.",
+    isFeatured: true
+  },
+  {
+    id: 2,
+    name: 'Rebel Radio',
+    description: "Responsive music streaming app with persistent HTML5 audio playback across route changes using a centralized React PlayerContext. Features persistent Favorites and custom Playlists with localStorage and React Portal-based playlist controls. Deployed on AWS S3 as a static site.",
+    deployment: '',
+    tools: ['React', 'Vite', 'JavaScript', 'React Router', 'localStorage', 'AWS S3'],
+    myRole: 'Frontend Developer',
+    role: 'Frontend Developer',
+    code: 'https://github.com/umer241419it-hue/Rebel-Radio',
+    demo: 'http://rebel-radio.s3-website-us-east-1.amazonaws.com/',
+    links: {
+      code: 'https://github.com/umer241419it-hue/Rebel-Radio',
+      demo: 'http://rebel-radio.s3-website-us-east-1.amazonaws.com/'
     },
-    {
-        id: 3,
-        name: 'AI Powered Real Estate',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
-        tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
-        code: '',
-        role: 'Full Stack Developer',
-        demo: '',
+    liveLinkNote: '',
+    isFeatured: false
+  },
+  {
+    id: 3,
+    name: 'AWS SBG MHSSCE Website',
+    description: "Contributed to the official AWS Student Builder Group MHSSCE website as a Core Team member, building frontend features with React and Vite. Developed the About page from Figma specifications while working with an existing component library and shared design system.",
+    deployment: '',
+    tools: ['React', 'Vite', 'CSS', 'Figma'],
+    myRole: 'Core Team Member & Frontend Developer',
+    role: 'Core Team Member & Frontend Developer',
+    code: 'TODO',
+    demo: 'https://d32gqbo6lod9b9.cloudfront.net/',
+    links: {
+      code: 'TODO',
+      demo: 'https://d32gqbo6lod9b9.cloudfront.net/'
     },
-    {
-        id: 4,
-        name: 'Newsroom Management',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
-        code: '',
-        demo: '',
-        role: 'Full Stack Developer',
-    }
+    liveLinkNote: '',
+    isFeatured: false
+  },
+  {
+    id: 4,
+    name: 'Face Recognition Attendance System',
+    description: "Automated attendance marking using face recognition, with each entry logged to CSV with an accurate timestamp.",
+    deployment: '',
+    tools: ['Python', 'OpenCV', 'dlib'],
+    myRole: 'Developer',
+    role: 'Developer',
+    code: 'https://github.com/umer241419it-hue/Facy',
+    demo: '',
+    links: {
+      code: 'https://github.com/umer241419it-hue/Facy',
+      demo: ''
+    },
+    liveLinkNote: '',
+    isFeatured: false
+  }
 ];
-
-
-// Do not remove any property.
-// Leave it blank instead as shown below
-
-// {
-//     id: 1,
-//     name: '',
-//     description: "",
-//     tools: [],
-//     role: '',
-//     code: '',
-//     demo: '',
-// },

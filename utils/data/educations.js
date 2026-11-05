@@ -1,20 +1,9 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
-  },
-  {
-    id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
-  },
-  {
-    id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
+    title: "Bachelor of Engineering – Information Technology",
+    duration: "2024 - 2028",
+    institution: "Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering, Mumbai University",
+    cgpa: "CGPA 9.13/10"
   }
-]
+];

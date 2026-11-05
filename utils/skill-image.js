@@ -82,6 +82,18 @@ import kubernetes from '../app/assets/svg/skills/kubernetes.svg'
 import linux from '../app/assets/svg/skills/linux.svg'
 import sqlalchemy from '../app/assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../app/assets/svg/skills/fastapi.svg'
+import sql from '../app/assets/svg/skills/sql.svg';
+import oracle from '../app/assets/svg/skills/oracle.svg';
+import reactRouter from '../app/assets/svg/skills/react-router.svg';
+import restApi from '../app/assets/svg/skills/rest-api.svg';
+import github from '../app/assets/svg/skills/github.svg';
+import android from '../app/assets/svg/skills/android.svg';
+import uiUx from '../app/assets/svg/skills/ui-ux.svg';
+import jira from '../app/assets/svg/skills/jira.svg';
+import agile from '../app/assets/svg/skills/agile.svg';
+import node from '../app/assets/svg/skills/node.svg';
+import express from '../app/assets/svg/skills/express.svg';
+import mern from '../app/assets/svg/skills/mern.svg';
 
 
 
@@ -253,7 +265,49 @@ export const skillsImage = (skill) => {
     case 'sqlalchemy':
       return sqlalchemy;
     case 'fastapi':
+    case 'fastapi':
       return fastapi;
+    case 'sql':
+      return sql;
+    case 'oracle':
+    case 'oracle cloud infrastructure':
+    case 'oci':
+      return oracle;
+    case 'react router':
+      return reactRouter;
+    case 'rest apis':
+    case 'rest api':
+      return restApi;
+    case 'github':
+      return github;
+    case 'android':
+      return android;
+    case 'ui/ux':
+    case 'ui ux':
+    case 'ui':
+    case 'ux':
+      return uiUx;
+    case 'vite':
+      return vitejs;
+    case 'jira':
+      return jira;
+    case 'agile':
+    case 'scrum':
+    case 'agile/scrum':
+      return agile;
+    case 'node':
+    case 'nodejs':
+    case 'node.js':
+    case 'node js':
+      return node;
+    case 'express':
+    case 'expressjs':
+    case 'express.js':
+    case 'express js':
+      return express;
+    case 'mern':
+    case 'mern stack':
+      return mern;
     default:
       break;
   }

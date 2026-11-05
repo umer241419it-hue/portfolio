@@ -1,3 +1,8 @@
+:root {
+  --nav-h: 76px;
+  --stack-header-h: 56px;
+}
+
 .glow-container {
   --spread: 60;
 }
@@ -93,4 +98,20 @@
   filter: brightness(1.5);
   mask-clip: padding-box, border-box;
   mask-composite: intersect;
+}
+
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .sticky-project-card {
+    position: sticky !important;
+    top: calc(var(--nav-h) + 16px + var(--i) * var(--stack-header-h)) !important;
+    z-index: calc(10 + var(--i) * 10) !important;
+  }
+}
+
+.project-stack-header {
+  height: var(--stack-header-h) !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
 }

@@ -33,21 +33,36 @@ function ContactForm() {
       setError({ ...error, required: false });
     };
 
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
+    if (!accessKey) {
+      toast.error("Contact form is not configured yet. Please set NEXT_PUBLIC_WEB3FORMS_KEY in your environment.");
+      return;
+    }
+
     try {
       setIsLoading(true);
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/contact`,
-        userInput
-      );
-
-      toast.success("Message sent successfully!");
-      setUserInput({
-        name: "",
-        email: "",
-        message: "",
+      const res = await axios.post("https://api.web3forms.com/submit", {
+        access_key: accessKey,
+        name: userInput.name,
+        email: userInput.email,
+        message: userInput.message,
+        subject: `New Portfolio Message from ${userInput.name}`,
       });
-    } catch (error) {
-      toast.error(error?.response?.data?.message);
+
+      if (res.data?.success) {
+        toast.success("Thank you! Your message has been sent successfully. I will get back to you soon.");
+        setUserInput({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        toast.error(res.data?.message || "Failed to send message. Please try again later.");
+      }
+    } catch (err) {
+      const msg = err?.response?.data?.message || err.message || "An unexpected error occurred while sending your message. Please try again later.";
+      toast.error(msg);
     } finally {
       setIsLoading(false);
     };
@@ -104,7 +119,7 @@ function ContactForm() {
           </div>
           <div className="flex flex-col items-center gap-3">
             {error.required && <p className="text-sm text-red-400">
-              All fiels are required!
+              All fields are required!
             </p>}
             <button
               className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"

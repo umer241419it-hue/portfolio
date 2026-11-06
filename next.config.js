@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  output: 'export',
   turbopack: {
     root: __dirname,
   },
@@ -8,6 +9,7 @@ module.exports = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
